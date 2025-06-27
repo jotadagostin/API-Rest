@@ -1,0 +1,17 @@
+{
+  "name": "api-rest",
+  "version": "1.0.0",
+  "main": "src/server.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jotadagostin/API-Rest.git"
+  },
+  "author": "Joao Paulo Dagostin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jotadagostin/API-Rest/issues"
+  },
+  "homepage": "https://github.com/jotadagostin/API-Rest#readme",
+  "description": "Creating an API REST with node.js"
+}
