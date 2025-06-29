@@ -13,5 +13,9 @@
     "url": "https://github.com/jotadagostin/API-Rest/issues"
   },
   "homepage": "https://github.com/jotadagostin/API-Rest#readme",
-  "description": "Creating an API REST with node.js"
+  "description": "Creating an API REST with node.js",
+  "devDependencies": {
+    "@types/node": "^20.14.12",
+    "typescript": "^5.5.4"
+  }
 }
