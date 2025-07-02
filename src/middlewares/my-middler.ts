@@ -5,6 +5,8 @@ export function myMiddlerware(
   response: Response,
   next: NextFunction
 ) {
+  request.user_id = "12334";
+
   console.log("It pass throw the middler!");
 
   return next();
