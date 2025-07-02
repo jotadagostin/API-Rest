@@ -1,4 +1,5 @@
 import { Request, Response } from "express";
+import { AppError } from "../utils/AppError";
 
 class ProductsController {
   //* index - get para listar varios registros
@@ -15,6 +16,25 @@ class ProductsController {
 
   create(request: Request, response: Response) {
     const { name, price } = request.body;
+
+    if (!name) {
+      throw new AppError("Name is required!");
+    }
+
+    if (name.trim().length < 6) {
+      throw new AppError("Name has to long enought(6 caracters)");
+    }
+
+    if (!price) {
+      throw new AppError("Price is required!");
+    }
+
+    if (price < 0) {
+      throw new AppError("Price can not be negative");
+    }
+
+    // throw new Error("ERRO AO TENTAR CRIAR UM PRODUTO!");
+    // throw new AppError("Error when tried to creat the product!");
 
     response.status(201).json({ name, price, user_id: request.user_id });
   }
